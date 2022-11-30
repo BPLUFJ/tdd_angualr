@@ -1,16 +1,19 @@
 <table>
   <tr>
-    <th>Currency</th>
     <th>Money</th>
+    <th>Currency</th>
   </tr>
   <tr *ngFor="let money of portfolio.money">
-    <td>{{money.currency}}</td>
     <td>{{money.amount}}</td>
+    <td>{{money.currency}}</td>
   </tr>
 </table>
 <hr>
+
+<label for="amount">Amount</label>
+<input type="number" [(ngModel)]="amount"><br><br>
 <label for="currency">Currency</label>
 <input type="text" [(ngModel)]="currency">
-<label for="amount">Amount</label>
-<input type="number" [(ngModel)]="amount">
+<br>
+<br>
 <button (click)="addMoney()">Add Money</button>
